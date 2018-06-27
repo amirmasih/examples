@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	padding: 15px 0;
+}
+
+/* Card Styles */
+
+.card {
+	/*Card Styles - Change to fit needs*/
+	height: 350px;
+	border-radius: 2px;
+	margin-bottom: 15px;
+	color: #222;
+	background-color: #EAEAEA;
+	position: relative;
+}
+
+.meta-wrapper {
+	height: 40%;
+	padding: 15px;
+	/*Flex*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.card h1 {
+	/*Strip Margins for Flex Positioning */
+	margin: 0px;
+	flex-basis: 100%;
+}
+
+.card .author {
+	align-self: flex-end;
+}
+
+.card .avatar {
+	align-self: flex-end;
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+}
+
+.bg-img-wrapper {
+	height: 60%;
+	width: 100%;
+	/*Set for Background Image Effect*/
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.bg-img /*In order to work properly, the parent element needs to be set to position: relative*/ {
+	transform: scale(1);
+	transition-duration: 1.5s;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.card:hover .bg-img {
+	transform: scale(1.1);
+	opacity: .8; /*Optional*/
+}
+
+.hover-color-effect::after /*Optional card background color behind image - HTML can be structured differently depending upon need*/ {
+	background: red;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: ' ';
+	position: absolute;
+	z-index: -3;
+}
+
+.dark-overlay /*Optional - Only required if text over bg-img*/ {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.35);
+	content: '';
+	position: absolute;
+	z-index: -1;
+}
+
+.cover-link /*Use to have link cover entire parent container - Must set parent container's position to relative*/ {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	position: absolute;
+	z-index: 1;
+}

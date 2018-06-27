@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	padding: 15px 0;
+}
+
+/* Card Styles */
+
+.main-article {
+	color: #222;
+	background-color: #EAEAEA;
+	position: relative;
+}
+
+.bg-img-wrapper {
+	padding-bottom: 250px;
+	width: 100%;
+	/*Set for Background Image Effect*/
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.bg-img /*In order to work properly, the parent element needs to be set to position: relative*/ {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.dark-overlay /*Optional - Only required if text over bg-img*/ {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.35);
+	content: '';
+	position: absolute;
+	z-index: -1;
+}
+
+.meta-wrapper {
+	/*Flex*/
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-article .author {
+	align-self: flex-end;
+}
+
+.main-article .avatar {
+	align-self: flex-end;
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+}
