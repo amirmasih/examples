@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=1, user-scalable=0">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		<meta name="description" content="">
+		<link rel="icon" href=“”>
+		<!-- Stylesheets -->
+		<link rel=stylesheet href="css/normalize.css" TYPE="text/css" media=screen>
+		<link rel=stylesheet href="css/style.css" TYPE="text/css" media=screen>
+		<link rel=stylesheet href="css/tabs.css" TYPE="text/css" media=screen>
+		<link rel=stylesheet href="css/audio-player.css" TYPE="text/css" media=screen>
+	</head>
+	<body>
+<!--		<div class="dropdown-backdrop"></div>-->
+		<header id="main-header">
+			<span>Logo</span>
+		</header><!--End Header-->
+		
+		<section class="sermon-player">
+			
+			<header>
+				<h1>Sample Sermon Title</h1>
+				<time datetime="2017-01-20" itemprop="datePublished">Jan 20 2017</time>
+				<div class="sermon-meta">
+					<span class="author">By: <a href="">Author Name</a></span>
+					<span class="series">Series: <a href="">Sample Series</a></span>
+					<span class="topic">Topic: <a href="">Sample Topic</a></span>
+					<span class="scripture">Scripture: <a href="">Genesis 1:1</a>, <a href="">Colossians 1:1</a></span>
+				</div>
+			</header>
+			
+			<div id="tab-content">
+				<div id="watch-content" class="embed-responsive embed-responsive-16by9 fade active">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/j2GjOC79gVI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div id="listen-content" class="audioplayer-wrapper fade">
+					<img src="media/series.jpg" alt="">
+					<audio preload="auto" controls>
+						<source src="https://api.spreaker.com/download/episode/10831469.mp3" />
+					</audio>
+				</div>
+			</div>
+			
+			<nav class="tabs">
+				<ul>
+					<li class="watch-tab active"><i class=""></i>Watch</li>
+					<li class="listen-tab"><i class=""></i>Listen</li>
+					<li class="download-tab"><i class=""></i>Download
+						<ul>
+							<li><a href="#">Video HD</a></li>
+							<li><a href="">Video SD</a></li>
+							<li><a href="">Video Mobile</a></li>
+							<li><a href="">Audio (MP3)</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>	
+		</section>
+		<h2>sdfsdf</h2>
+		<!-- Scripts -->
+		<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="js/tabs.js"></script>
+		<script src="js/audio-player.js"></script>
+		<script>
+		$( function()
+				{
+						$( 'audio' ).audioPlayer();
+				});
+		</script> 
+		<!--[if lt IE 9]>
+			<script>
+				document.createElement("header" );
+				document.createElement("footer" );
+				document.createElement("section"); 
+				document.createElement("aside"  );
+				document.createElement("nav"    );
+				document.createElement("article"); 
+				document.createElement("hgroup" ); 
+				document.createElement("time"   );
+			</script>
+			<noscript>
+				 <strong>Warning !</strong>
+				 Because your browser does not support HTML5, some elements are created using JavaScript.
+				 Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+			</noscript>
+		<![endif]-->
+    </body>
+</html>
