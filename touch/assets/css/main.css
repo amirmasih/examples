@@ -115,7 +115,7 @@ img.background-image {
   color: white;
 }
 
-.js-hover {
+.hover-effect {
   width: 100vw;
   height: 50vh;
   background-color: pink;
@@ -123,6 +123,6 @@ img.background-image {
   color: white;
 }
 
-.js-hover.hover_effect {
+.hover-effect.js-hover {
   background-color: lightgreen;
 }
