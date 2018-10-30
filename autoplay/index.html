@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=1, user-scalable=0">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		<meta name="description" content="">
+		<link rel="icon" href="assets/png/default-favicon.png">
+		<!-- Stylesheets -->
+		<link rel=stylesheet href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.css" TYPE="text/css" media=screen>
+		<link rel=stylesheet href="assets/css/main.css" TYPE="text/css" media=screen>
+	</head>
+	<body>
+		<button class="play1">Play</button>
+		<button class="stop1">Stop</button>
+		<div class="video1"></div>
+		<!-- Scripts -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+			var autoPlayVideo1 = '<iframe src="https://player.vimeo.com/video/78092371?autoplay=1&color=f0001c" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+			$('.play1').on('click', function() {
+				// $('.hero').fadeOut(200);
+				$('.video1').html(autoPlayVideo1);
+			});
+
+			$('.stop1').on('click', function() {
+				// $('.hero').fadeIn(200);
+				$('.video1').html('');
+			});
+		</script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
+
+<!-- <iframe class="embed-player slide-media" width="560" height="315" src="https://www.youtube.com/embed/sqFNPFEvmAk?controls=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<iframe class="embed-player slide-media" width="980" height="520" src="https://www.youtube.com/embed/tdwbYGe8pv8?enablejsapi=1&fs=0&iv_load_policy=3&rel=0&showinfo=0&loop=1&playlist=tdwbYGe8pv8&start=102" frameborder="0" allowfullscreen></iframe> 
+
+<div style="position:relative;width:100%;height:0;padding-bottom:56.25%"><iframe tabindex="-1" width="100%" height="100%" src="https://embed.sermonaudio.com/player/v/103018056439/?autoplay=true" style="position:absolute;left:0;top:0" allowfullscreen allow="autoplay" frameborder="0" scrolling="no"></iframe></div> 
+
+<iframe src="https://player.vimeo.com/video/78092371?autoplay=1&color=f0001c" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<video controls autoplay><source src="http://78da12wnqdh45x7ti410l6s8.wpengine.netdna-cdn.com/wp-content/uploads/2018/01/banner-video.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+
+-->
