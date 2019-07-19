@@ -195,27 +195,23 @@ article {
   width: 100%;
 }
 
-img {
-  display: none;
-}
-
 .left-half article:nth-child(1) {
-  background: pink;
+  background: #ffc0cbbf;
 }
 
 .left-half article:nth-child(2) {
-  background: lightblue;
+  background: #add8e6bd;
 }
 .left-half article:nth-child(3) {
-  background: lightgreen;
+  background: #90ee90c2;
 }
 
 .right-half article:nth-child(1) {
-  background: lightsalmon;
+  background: #ffa07aad;
 }
 
 .right-half article:nth-child(2) {
-  background: lightslategray;
+  background: #778799bd;
 }
 
 .block-grid .left-half:only-child article:nth-child(1) {
