@@ -1,0 +1,305 @@
+/*Sola Normalize*/
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+img {
+		max-width: 100%;
+		display: block;
+		height: auto;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+button {
+	background-color: transparent;
+	padding: 0;
+	border-width: 0;
+	border-style: 0;
+	border-color: transparent;
+}
+
+button:focus {
+  outline: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*Sola Utility Classes*/
+
+a.cover-link {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  position: absolute;
+  display: none; /*remove*/
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0
+}
+
+.color-overlay {
+	top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.54); /*Change this line if project requires different color or gradient*/
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.background-image-wrapper {
+	/*The element containing this class also needs a height set. You can target the element or add a sibling class. Height can be set by padding, min-height, or height, depending upon specific case. The element containing this class needs an <img> with the class .background-image.*/
+  position: relative;
+  overflow: hidden;
+}
+
+img.background-image {
+	/*The parent of the <img> needs to have the .background-image-wrapper class as well as a height set (can be set by padding, min-height, or height, depending upon specific case*/
+	transform: scale(1);
+  transition: transform 1.5s;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.background-image-wrapper > img.background-image {
+	transform: scale(1.05);
+}
+
+/* Must Style */
+
+*::selection /*Can adjust values as needed. This changes highlighte text. */ {
+	background-color: #222222; /*Change to Primary Color*/
+	color: #ffffff; /*Change if necessary*/
+}
+
+/* Fide Grid Example */
+
+body {
+  position: relative;
+}
+
+.block-grid {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.block-grid section {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+}
+
+article {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 75%;
+  text-align: center;
+  line-height: 1.7;
+  position: relative;
+}
+
+.left-half article:nth-child(1) { 
+  height: 0;
+  flex-basis: 100%;
+  padding-bottom: 50%;
+}
+
+.left-half article:nth-child(2) { 
+  height: 0;
+  flex-basis: 50%;
+  padding-bottom: 100%;
+  flex-grow: 1; /*This is here just in case there are only 2 articles in .left-hald */
+}
+
+.left-half article:nth-child(3) { 
+  height: 0;
+  flex-basis: 50%;
+  padding-bottom: 100%;
+}
+
+.left-half article:only-child /* This is is .left-half only has one child */ {
+  padding-bottom: 150%;
+}
+
+.right-half article:nth-child(1) {
+  height: 0;
+  width: 100%;
+  padding-bottom: 100%;
+} 
+
+.right-half article:nth-child(2) { 
+  height: 0;
+  flex-basis: 100%;
+  padding-bottom: 50%;
+}
+
+.right-half article:only-child /* This is is .right-half only has one child */ {
+  padding-bottom: 150%;
+}
+
+h1,
+p {
+  /* position: absolute;
+  top: 0;
+  left: 0 */
+  display: none;
+}
+
+img {
+  display: none;
+}
+
+.left-half article:nth-child(1) {
+  background: pink;
+}
+
+.left-half article:nth-child(2) {
+  background: lightblue;
+}
+.left-half article:nth-child(3) {
+  background: lightgreen;
+}
+
+.right-half article:nth-child(1) {
+  background: lightsalmon;
+}
+
+.right-half article:nth-child(2) {
+  background: lightslategray;
+}
+
+.block-grid .left-half:only-child article:nth-child(1) {
+  flex-basis: 100%;
+  padding-bottom: 100%;
+}
+
+.block-grid .left-half:only-child article:nth-child(1):nth-last-child(2) {
+  flex-basis: 50%;
+  padding-bottom: 50%;
+}
+
+.block-grid .left-half:only-child article:nth-child(2) {
+  flex-basis: 50%;
+  padding-bottom: 100%;
+}
+
+.block-grid .left-half:only-child article:nth-child(3) {
+  flex-basis: 50%;
+  padding-bottom: 100%;
+}
+
+.block-grid .left-half:only-child article:only-child {
+  flex-basis: 100%;
+  padding-bottom: 50%;
+}
+
+.block-grid .left-half:only-child article:nth-child(2):last-child {
+  flex-basis: 50%;
+  padding-bottom: 50%;
+}
+
+.block-grid section:only-child article:nth-child(1) {
+  flex-basis: 50%;
+  padding-bottom: 50%;
+}
+
+.block-grid section:only-child article:nth-child(2) {
+  flex-basis: 25%;
+  padding-bottom: 50%;
+  flex-grow: 1;
+}
+.block-grid section:only-child article:nth-child(3) {
+  flex-basis: 25%;
+  padding-bottom: 50%;
+}
+
+.block-grid section:only-child article:only-child /* When only 1 block on left half*/ {
+  flex-basis: 100%;
+}
+
+
+@media (min-width: 768px) {
+
+  .block-grid {
+    flex-wrap: nowrap;
+  }
+
+  .block-grid section {
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+
+  .block-grid .first-half:only-child {
+    flex-wrap: nowrap;
+  }
+
+  .block-grid .left-half:only-child article:nth-child(1) {
+    flex-basis: 50%;
+    padding-bottom: 50%;
+  }
+  
+  .block-grid .left-half:only-child article:nth-child(2) {
+    flex-basis: 25%;
+    padding-bottom: 50%;
+  }
+  
+  .block-grid .left-half:only-child article:nth-child(3) {
+    flex-basis: 25%;
+    padding-bottom: 50%;
+  }
+
+  .block-grid .left-half:only-child article:only-child {
+    flex-basis: 100%;
+    padding-bottom: 50%;
+  }
+
+}
+
+@media (min-width: 992px) {
+  section {
+    width: 970px;
+    margin: 0 auto;
+  }
+
+}
+
